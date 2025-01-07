@@ -3,7 +3,7 @@ Dogzilla S2 with ROS2 Humble : https://github.com/YahboomTechnology/DOGZILLA
 Control device with Foxglove Studio + dogzilla-gesture-cmd extension: https://github.com/Purmpol/dogzilla-gesture-cmd  
 
 
-[terminal 1]
+[terminal 1]  
 ros2 launch foxglove_bridge foxglove_bridge_launch.xml port:=9090  
 
 [terminal 2]  
