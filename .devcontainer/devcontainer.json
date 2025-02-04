@@ -33,6 +33,9 @@
     //   "--pid=host",
     //   "--ipc=host",
     //   "-e", "DISPLAY=${env:DISPLAY}"
+    "--device", "/dev/snd:/dev/snd",
+    "-v", "/etc/asound.conf:/etc/asound.conf",
+    "-v", "/usr/share/alsa:/usr/share/alsa"    
   ],
   "mounts": [
      "source=/tem/.X11-unix,target=/tmp/.X11-unix,type=bind,consistency=cached",
@@ -40,8 +43,6 @@
      "source=/home/pi/dogzilla_ws/.bash_history,target=/root/.bash_history,type=bind,consistency=cached",
      "source=/dev/myspeech,target=/dev/myspeech,type=bind,consistency=cached",
      "source=/dev/video0,target=/dev/video0,type=bind,consistency=cached"
-
-
   ],
   "features": {
     "ghcr.io/devcontainers/features/desktop-lite:1": {}
@@ -61,5 +62,5 @@
 
   // "postCreateCommand": "sudo rosdep update && sudo rosdep install --from-paths src --ignore-src -y && sudo chown -R $(whoami) /home/ws/",
   //   "postCreateCommand": "sudo chown -R $(whoami) /home/pi/ws/"
-  "postCreateCommand": "echo 'source /home/pi/dogzilla_ws/install/setup.bash' >> ~/.bashrc"
+  "postCreateCommand": "bash -e .devcontainer/scripts/install-dependencies.sh"
 }
