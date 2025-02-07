@@ -439,6 +439,7 @@
     <child link="laser_link"/>
     <axis xyz="0 0 0"/>
   </joint>
+<!--
   <link name="imu_link">
     <inertial>
       <origin rpy="0 0 0" xyz="3.78566923279477E-05 -0.000119937093508327 -0.022798439512917"/>
@@ -467,4 +468,5 @@
     <child link="imu_link"/>
     <axis xyz="0 0 0"/>
   </joint>
+-->
 </robot>
