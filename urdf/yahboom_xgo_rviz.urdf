@@ -22,7 +22,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/base_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/base_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.529411764705882 0.549019607843137 0.549019607843137 1"/>
@@ -31,7 +31,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/base_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/base_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -44,7 +44,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/lf_hip_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/lf_hip_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1"/>
@@ -53,7 +53,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/lf_hip_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/lf_hip_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -73,7 +73,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/lf_upper_leg_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/lf_upper_leg_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1"/>
@@ -82,7 +82,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/lf_upper_leg_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/lf_upper_leg_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -102,7 +102,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/lf_lower_leg_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/lf_lower_leg_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1"/>
@@ -111,7 +111,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/lf_lower_leg_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/lf_lower_leg_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -131,7 +131,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/rf_hip_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/rf_hip_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1"/>
@@ -140,7 +140,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/rf_hip_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/rf_hip_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -160,7 +160,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/rf_upper_leg_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/rf_upper_leg_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1"/>
@@ -169,7 +169,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/rf_upper_leg_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/rf_upper_leg_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -189,7 +189,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/rf_lower_leg_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/rf_lower_leg_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1"/>
@@ -198,7 +198,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/rf_lower_leg_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/rf_lower_leg_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -218,7 +218,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/lh_hip_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/lh_hip_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1"/>
@@ -227,7 +227,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/lh_hip_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/lh_hip_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -247,7 +247,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/lh_upper_leg_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/lh_upper_leg_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1"/>
@@ -256,7 +256,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/lh_upper_leg_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/lh_upper_leg_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -276,7 +276,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/lh_lower_leg_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/lh_lower_leg_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1"/>
@@ -285,7 +285,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/lh_lower_leg_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/lh_lower_leg_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -305,7 +305,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/rh_hip_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/rh_hip_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1"/>
@@ -314,7 +314,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/rh_hip_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/rh_hip_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -334,7 +334,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/rh_upper_leg_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/rh_upper_leg_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1"/>
@@ -343,7 +343,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/rh_upper_leg_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/rh_upper_leg_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -363,7 +363,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/rh_lower_leg_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/rh_lower_leg_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1"/>
@@ -372,7 +372,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/rh_lower_leg_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/rh_lower_leg_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -392,7 +392,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/camera_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/camera_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.0549019607843137 0.0549019607843137 0.0549019607843137 1"/>
@@ -401,7 +401,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/camera_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/camera_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -420,7 +420,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/laser_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/laser_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -429,7 +429,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/laser_link.STL"/>
+        <mesh filename="package://yahboom_description/meshes/XGO/laser_link.STL"/>
       </geometry>
     </collision>
   </link>
