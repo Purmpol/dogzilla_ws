@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="xgo" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:property name="pi"  value  = "3.14"/>
+  <link name="base_footprint"/>
+  <joint name="base_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link" />
+    <origin xyz="0 0 0.010" rpy="0 0 0"/>
+  </joint>
+  
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00520835146477011 -0.000260539720599709 0.0280591836024867"
+        rpy="0 0 0" />
+      <mass
+        value="0.387351847505872" />
+      <inertia
+        ixx="0.000190614924105559"
+        ixy="1.611909782579E-06"
+        ixz="-3.19577698047172E-06"
+        iyy="0.0010563840813291"
+        iyz="-1.54888786284979E-06"
+        izz="0.00118548753067654" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.529411764705882 0.549019607843137 0.549019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="lf_hip_link">
+    <inertial>
+      <origin
+        xyz="-0.0139720018610026 0.0250894092965121 0.00927328896542384"
+        rpy="0 0 0" />
+      <mass
+        value="0.019600254805245" />
+      <inertia
+        ixx="5.89203493378017E-06"
+        ixy="-5.67038080686865E-07"
+        ixz="-2.62883769311083E-07"
+        iyy="3.7904205321723E-06"
+        iyz="-1.16491568847576E-06"
+        izz="6.88837034802653E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/lf_hip_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/lf_hip_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lf_hip_joint"
+    type="revolute">
+    <origin
+      xyz="0.09332 0.022407 0.01454"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lf_hip_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit effort="25" lower="${-pi}" upper="${pi}" velocity="1.5" />
+  </joint>
+  <link
+    name="lf_upper_leg_link">
+    <inertial>
+      <origin
+        xyz="-0.00689428079248722 -0.0186700000000002 -0.0299480398915498"
+        rpy="0 0 0" />
+      <mass
+        value="0.012342949675616" />
+      <inertia
+        ixx="5.47497407669945E-06"
+        ixy="-3.81090641763637E-22"
+        ixz="5.64425515319236E-21"
+        iyy="4.86023562858699E-06"
+        iyz="1.43987804089399E-12"
+        izz="1.83454593627849E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/lf_upper_leg_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/lf_upper_leg_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lf_upper_leg_joint"
+    type="revolute">
+    <origin
+      xyz="-0.018325 0.049313 0"
+      rpy="0 0 0" />
+    <parent
+      link="lf_hip_link" />
+    <child
+      link="lf_upper_leg_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit effort="25" lower="${-pi}" upper="${pi}" velocity="1.5" />
+  </joint>
+  <link
+    name="lf_lower_leg_link">
+    <inertial>
+      <origin
+        xyz="-0.0167811557825132 -0.0183250059303989 -0.03162385840477"
+        rpy="0 0 0" />
+      <mass
+        value="0.022687879462132" />
+      <inertia
+        ixx="1.41147289858082E-05"
+        ixy="-5.34206016944144E-13"
+        ixz="-9.81905906721924E-07"
+        iyy="1.36483004430885E-05"
+        iyz="-2.32220795182774E-12"
+        izz="1.39274465973039E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/lf_lower_leg_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/lf_lower_leg_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lf_lower_leg_link"
+    type="revolute">
+    <origin
+      xyz="0 -0.00072 -0.059896"
+      rpy="0 0 0" />
+    <parent
+      link="lf_upper_leg_link" />
+    <child
+      link="lf_lower_leg_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit effort="25" lower="${-pi}" upper="${pi}" velocity="1.5" />
+  </joint>
+  <link
+    name="rf_hip_link">
+    <inertial>
+      <origin
+        xyz="-0.0139720087743548 -0.0250894047059051 0.00927327973937202"
+        rpy="0 0 0" />
+      <mass
+        value="0.00980012555956536" />
+      <inertia
+        ixx="2.94601764038129E-06"
+        ixy="2.83519397568544E-07"
+        ixz="-1.31441224533273E-07"
+        iyy="1.89520891096478E-06"
+        iyz="5.82458368574124E-07"
+        izz="3.44418624242758E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/rf_hip_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/rf_hip_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf_hip_joint"
+    type="revolute">
+    <origin
+      xyz="0.09332 -0.022517 0.01454"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rf_hip_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit effort="25" lower="${-pi}" upper="${pi}" velocity="1.5" />
+  </joint>
+  <link
+    name="rf_upper_leg_link">
+    <inertial>
+      <origin
+        xyz="-0.00689428079248688 0.018700000000002 -0.0299480398915499"
+        rpy="0 0 0" />
+      <mass
+        value="0.0123429496756159" />
+      <inertia
+        ixx="5.47497407669944E-06"
+        ixy="-2.0611276716309E-20"
+        ixz="1.96257242900458E-21"
+        iyy="4.86023562858698E-06"
+        iyz="1.43987803985982E-12"
+        izz="1.83454593627847E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/rf_upper_leg_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/rf_upper_leg_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf_upper_leg_joint"
+    type="revolute">
+    <origin
+      xyz="-0.018325 -0.049313 0"
+      rpy="0 0 0" />
+    <parent
+      link="rf_hip_link" />
+    <child
+      link="rf_upper_leg_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit effort="25" lower="${-pi}" upper="${pi}" velocity="1.5" />
+  </joint>
+  <link
+    name="rf_lower_leg_link">
+    <inertial>
+      <origin
+        xyz="-0.016781155771109 0.0183249940632203 -0.0316238583795284"
+        rpy="0 0 0" />
+      <mass
+        value="0.0226878794123114" />
+      <inertia
+        ixx="1.41147289746255E-05"
+        ixy="-5.3440270556883E-13"
+        ixz="-9.81905905136456E-07"
+        iyy="1.3648300431669E-05"
+        iyz="-2.32170698199082E-12"
+        izz="1.39274465829374E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/rf_lower_leg_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/rf_lower_leg_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf_lower_leg_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.059896"
+      rpy="0 0 0" />
+    <parent
+      link="rf_upper_leg_link" />
+    <child
+      link="rf_lower_leg_link" />
+    <axis
+      xyz="0 -1 0" />
+     <limit effort="25" lower="${-pi}" upper="${pi}" velocity="1.5" />
+  </joint>
+  <link
+    name="lh_hip_link">
+    <inertial>
+      <origin
+        xyz="-0.0139720018610022 0.0250894092965121 0.00927328896542402"
+        rpy="0 0 0" />
+      <mass
+        value="0.019600254805245" />
+      <inertia
+        ixx="5.89203493378016E-06"
+        ixy="-5.67038080686868E-07"
+        ixz="-2.62883769311102E-07"
+        iyy="3.79042053217232E-06"
+        iyz="-1.16491568847579E-06"
+        izz="6.8883703480265E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/lh_hip_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/lh_hip_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lh_hip_joint"
+    type="revolute">
+    <origin
+      xyz="-0.05668 0.022407 0.01454"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lh_hip_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit effort="25" lower="${-pi}" upper="${pi}" velocity="1.5" />
+  </joint>
+  <link
+    name="lh_upper_leg_link">
+    <inertial>
+      <origin
+        xyz="-0.00689428079248695 -0.0186700000000005 -0.0299480398915495"
+        rpy="0 0 0" />
+      <mass
+        value="0.0123429496756159" />
+      <inertia
+        ixx="5.47497407669944E-06"
+        ixy="-2.75633243799764E-21"
+        ixz="9.32745289581667E-21"
+        iyy="4.86023562858698E-06"
+        iyz="1.4398780610445E-12"
+        izz="1.83454593627848E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/lh_upper_leg_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/lh_upper_leg_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lh_upper_leg_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0183249999999999 0.0493130541805868 0"
+      rpy="0 0 0" />
+    <parent
+      link="lh_hip_link" />
+    <child
+      link="lh_upper_leg_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit effort="25" lower="${-pi}" upper="${pi}" velocity="1.5" />
+  </joint>
+  <link
+    name="lh_lower_leg_link">
+    <inertial>
+      <origin
+        xyz="-0.0167811557787652 -0.0183250059325003 -0.0316238584061345"
+        rpy="0 0 0" />
+      <mass
+        value="0.0226878794439316" />
+      <inertia
+        ixx="1.41147289784473E-05"
+        ixy="-5.34101678210922E-13"
+        ixz="-9.81905906147013E-07"
+        iyy="1.36483004357316E-05"
+        iyz="-2.32069575705543E-12"
+        izz="1.39274465908676E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/lh_lower_leg_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/lh_lower_leg_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lh_lower_leg_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.00072 -0.059896"
+      rpy="0 0 0" />
+    <parent
+      link="lh_upper_leg_link" />
+    <child
+      link="lh_lower_leg_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit effort="25" lower="${-pi}" upper="${pi}" velocity="1.5" />
+  </joint>
+  <link
+    name="rh_hip_link">
+    <inertial>
+      <origin
+        xyz="-0.0139720087743545 -0.0250894047059051 0.00927327973937168"
+        rpy="0 0 0" />
+      <mass
+        value="0.00980012555956509" />
+      <inertia
+        ixx="2.94601764038125E-06"
+        ixy="2.83519397568547E-07"
+        ixz="-1.31441224533272E-07"
+        iyy="1.89520891096475E-06"
+        iyz="5.8245836857411E-07"
+        izz="3.44418624242756E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/rh_hip_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/rh_hip_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rh_hip_joint"
+    type="revolute">
+    <origin
+      xyz="-0.05668 -0.022517 0.01454"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rh_hip_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit effort="25" lower="${-pi}" upper="${pi}" velocity="1.5" />
+  </joint>
+  <link
+    name="rh_upper_leg_link">
+    <inertial>
+      <origin
+        xyz="-0.00689428079248684 0.0187000000000015 -0.0299480398915497"
+        rpy="0 0 0" />
+      <mass
+        value="0.0123429496756159" />
+      <inertia
+        ixx="5.47497407669943E-06"
+        ixy="-1.59437966027726E-21"
+        ixz="2.38691803281188E-22"
+        iyy="4.86023562858697E-06"
+        iyz="1.43987807159176E-12"
+        izz="1.83454593627849E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/rh_upper_leg_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/rh_upper_leg_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rh_upper_leg_joint"
+    type="revolute">
+    <origin
+      xyz="-0.018325 -0.049313 0"
+      rpy="0 0 0" />
+    <parent
+      link="rh_hip_link" />
+    <child
+      link="rh_upper_leg_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit effort="25" lower="${-pi}" upper="${pi}" velocity="1.5" />
+  </joint>
+  <link
+    name="rh_lower_leg_link">
+    <inertial>
+      <origin
+        xyz="-0.0167811557016845 0.0183249940379433 -0.0316238581313005"
+        rpy="0 0 0" />
+      <mass
+        value="0.0226878792028959" />
+      <inertia
+        ixx="1.41147288978932E-05"
+        ixy="-5.37750477164225E-13"
+        ixz="-9.81905884621754E-07"
+        iyy="1.36483003526844E-05"
+        iyz="-2.33519052107278E-12"
+        izz="1.39274464946125E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/rh_lower_leg_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/rh_lower_leg_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rh_lower_leg_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.059896"
+      rpy="0 0 0" />
+    <parent
+      link="rh_upper_leg_link" />
+    <child
+      link="rh_lower_leg_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit effort="25" lower="${-pi}" upper="${pi}" velocity="1.5" />
+  </joint>
+  <link
+    name="camera_link">
+    <inertial>
+      <origin
+        xyz="-0.0141667877097374 -4.70243546289578E-05 -0.000117154201057887"
+        rpy="0 0 0" />
+      <mass
+        value="0.00465716120355248" />
+      <inertia
+        ixx="3.06225211138596E-07"
+        ixy="-1.92519366340594E-09"
+        ixz="5.22083640009109E-09"
+        iyy="3.69724180703298E-07"
+        iyz="2.22463439295763E-09"
+        izz="3.81829903495435E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/camera_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0549019607843137 0.0549019607843137 0.0549019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/camera_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera_Joint"
+    type="fixed">
+    <origin
+      xyz="0.075751 0 0.059653"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="camera_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="laser_link">
+    <inertial>
+      <origin
+        xyz="3.78566923279477E-05 -0.000119937093508327 -0.022798439512917"
+        rpy="0 0 0" />
+      <mass
+        value="0.0141156733693049" />
+      <inertia
+        ixx="2.42577727195545E-06"
+        ixy="-7.70141087552742E-09"
+        ixz="6.54011918414534E-09"
+        iyy="2.37021015047955E-06"
+        iyz="6.61859556534528E-09"
+        izz="4.25931212063486E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/laser_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/yahboom/cartoros2/src/yahboom_description/meshes/XGO/laser_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="laser_Joint"
+    type="fixed">
+    <origin
+      xyz="-0.016732 4.4164E-05 0.10335"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="laser_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+
+  <link
+    name="imu_link">
+    <inertial>
+      <origin
+        xyz="3.78566923279477E-05 -0.000119937093508327 -0.022798439512917"
+        rpy="0 0 0" />
+      <mass
+        value="0.0141156733693049" />
+      <inertia
+        ixx="2.42577727195545E-06"
+        ixy="-7.70141087552742E-09"
+        ixz="6.54011918414534E-09"
+        iyy="2.37021015047955E-06"
+        iyz="6.61859556534528E-09"
+        izz="4.25931212063486E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="imu_Joint"
+    type="fixed">
+    <origin
+      xyz="0.085 4.4164E-05 0.070"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="imu_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  
+</robot>
