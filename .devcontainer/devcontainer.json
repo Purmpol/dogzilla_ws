@@ -29,7 +29,7 @@
       "ROS_DOMAIN_ID": "42"
   },
   "runArgs": [
-    //   "--net=host",
+      "--net=host",
     //   "--pid=host",
     //   "--ipc=host",
     //   "-e", "DISPLAY=${env:DISPLAY}"
