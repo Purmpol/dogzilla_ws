@@ -39,7 +39,7 @@ ros2 run voice_cmd voice_cmd
 
 ## dogzilla-follow-waypoints  
 
-[dogzilla-follow-waypoints](dogzilla-follow-waypoints) Foxglove Extension
+[dogzilla-follow-waypoints](https://github.com/Purmpol/dogzilla-follow-waypoints) Foxglove Extension
 
 ### How to run
 #### In Real VNC
